@@ -1,0 +1,4 @@
+[alias]
+    # Follow evolution of certain lines in a file
+    # arg1=file, arg2=first line, arg3=last line or blank for just the first line
+    follow = "!sh -c 'git log --topo-order -u -L $2,${3:-$2}:"$1"'" -
